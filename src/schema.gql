@@ -1,0 +1,32 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type AuthPayload {
+  access_token: String!
+}
+
+type Todo {
+  _id: ID!
+  title: String!
+  description: String
+  completed: Boolean!
+  user: ID!
+}
+
+type Query {
+  getTodos: [Todo!]!
+}
+
+type Mutation {
+  signup(email: String!, password: String!): AuthPayload!
+  login(email: String!, password: String!): AuthPayload!
+  createTodo(createTodoInput: CreateTodoInput!): Todo!
+  updateTodo(id: String!, completed: Boolean!): Todo!
+  deleteTodo(id: String!): Todo!
+}
+
+input CreateTodoInput {
+  title: String!
+  description: String
+}
