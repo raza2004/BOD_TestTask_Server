@@ -7,6 +7,8 @@ async function bootstrap() {
     origin: 'https://bod-test-task-client-8nnkl5n9w-owais-projects-7419f1cc.vercel.app/', // your frontend URL
     credentials: true,
   });
-  await app.listen(4000);
+  const port = process.env.PORT || 8000;
+  
+  await app.listen(port);
 }
 bootstrap();
