@@ -48,8 +48,7 @@ export class TodosResolver {
     @CurrentUser() user: User,
   ) {
     try {
-      console.log('Updating todo with ID:', id, typeof id);
-      console.log('Current user ID:', user._id);
+     
       return await this.todosService.delete(id, user._id.toString());
     } catch (error) {
       throw new Error(`Failed to delete todo: ${error.message}`);

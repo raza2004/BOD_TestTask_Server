@@ -8,8 +8,7 @@ async function bootstrap() {
     credentials: true,
   });
   const port = process.env.PORT || 8000;
-  console.log(`Server is running on port ${port}`);
-  console.log(`Server is running on port ${app}`);
+ 
   await app.listen(port);
 }
 bootstrap();
