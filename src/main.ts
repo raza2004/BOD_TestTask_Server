@@ -4,11 +4,12 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors({
-    origin: 'https://bod-test-task-client-8nnkl5n9w-owais-projects-7419f1cc.vercel.app', // your frontend URL
+    origin: 'https://bod-test-task-client.vercel.app', // your frontend URL
     credentials: true,
   });
   const port = process.env.PORT || 8000;
-  
+  console.log(`Server is running on port ${port}`);
+  console.log(`Server is running on port ${app}`);
   await app.listen(port);
 }
 bootstrap();
