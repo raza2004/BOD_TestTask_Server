@@ -96,3 +96,21 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+
+
+## Running the project locally with CORS enabled
+To run the project locally with CORS enabled, you have to change the following lines in the `main.ts` file:
+```typescript
+ app.enableCors({
+    origin: 'https://bod-test-task-client.vercel.app', // your frontend URL
+    credentials: true,
+  });
+  ```
+  to
+  ```typescript
+  app.enableCors({
+    origin: 'locahost:3000', // your frontend URL
+    credentials: true,
+    });
+    ```
+
